@@ -1,0 +1,102 @@
+{
+  "name": "golang-gherkingen",
+  "displayName": "Golang - BDD (gherkin) generator",
+  "description": "Behaviour Driven Development (BDD) tests boilerplate generator for Golang.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "homepage": "https://github.com/hedhyw/vscode-golang-gherkingen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hedhyw/vscode-golang-gherkingen"
+  },
+  "bugs": {
+    "url": "https://github.com/hedhyw/vscode-golang-gherkingen/issues"
+  },
+  "icon": "img/icon.png",
+  "license": "MIT",
+  "keywords": [
+    "go",
+    "golang",
+    "boilerplate",
+    "generator",
+    "test",
+    "bdd",
+    "bdd-style",
+    "gherkin",
+    "cucumber",
+    "behavior-driven-development",
+    "golang-library",
+    "golang-package",
+    "bdd-framework",
+    "bdd-tests",
+    "bdd-style-testing-framework",
+    "cucumber-gherkin",
+    "gherkingen"
+  ],
+  "categories": [
+    "Programming Languages"
+  ],
+  "author": "Maksym Kryvchun",
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "feature",
+        "aliases": [
+          "feature",
+          "gherkin",
+          "Gherkin",
+          "cucumber"
+        ],
+        "extensions": [
+          ".feature",
+          ".testcase"
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "golang-gherkingen.generate",
+        "title": "Generate BDD Golang test",
+        "category": "Go",
+        "icon": "$(bracket)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "golang-gherkingen.generate",
+          "group": "3_open",
+          "when": "resourceLangId == 'feature'"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "@types/vscode": "^1.78.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "@vscode/test-electron": "^2.3.2",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "docker-cli-js": "^2.10.0"
+  }
+}
