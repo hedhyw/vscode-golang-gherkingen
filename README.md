@@ -34,3 +34,7 @@ No known issues.
 ### 1.0.0
 
 Initial release of golang-gherkingen.
+
+### 1.0.1
+
+Update [gherkingen](https://github.com/hedhyw/gherkingen) generator to the version v3.0.2.
