@@ -2,7 +2,7 @@
   "name": "golang-gherkingen",
   "displayName": "Golang - BDD (gherkin) generator",
   "description": "Behaviour Driven Development (BDD) tests boilerplate generator for Golang.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.78.0"
   },
