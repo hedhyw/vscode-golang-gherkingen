@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import { promisify } from 'util';
 import { exec, PromiseWithChild } from "child_process";
 
-const dockerImage = 'hedhyw/gherkingen:v3.0.2';
+const dockerImage = 'hedhyw/gherkingen:v3.0.3';
 const execCommand = promisify(exec);
 
 export function activate(context: vscode.ExtensionContext) {
