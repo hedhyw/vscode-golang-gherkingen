@@ -42,3 +42,7 @@ Update [gherkingen](https://github.com/hedhyw/gherkingen) generator to the versi
 ### 1.0.2
 
 Update [gherkingen](https://github.com/hedhyw/gherkingen) generator to the version v3.0.3.
+
+### 1.0.3
+
+Update [gherkingen](https://github.com/hedhyw/gherkingen) generator to the version v4.0.0.
