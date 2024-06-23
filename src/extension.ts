@@ -1,8 +1,9 @@
 import * as vscode from 'vscode';
 import { promisify } from 'util';
 import { exec, PromiseWithChild } from "child_process";
+import path = require('path');
 
-const dockerImage = 'hedhyw/gherkingen:v3.0.3';
+const dockerImage = 'hedhyw/gherkingen:v4.0.0';
 const execCommand = promisify(exec);
 
 export function activate(context: vscode.ExtensionContext) {
@@ -75,6 +76,8 @@ function dockerInspect(image: string): PromiseWithChild<Output> {
 
 function runDockerGenerator(fileName: string): Thenable<Output> {
 	return new Promise<Output>((resolve) => {
+		const fileNameInContainer = path.join('/host/', fileName);
+
 		const command = [
 			'docker',
 			'run',
@@ -84,9 +87,9 @@ function runDockerGenerator(fileName: string): Thenable<Output> {
 			'--network',
 			'none',
 			'--volume',
-			'"' + fileName + '":"/host/feature":ro',
+			'"' + fileName + '":"'+fileNameInContainer+'":ro',
 			dockerImage,
-			'/host/feature',
+			fileNameInContainer,
 		];
 
 		execCommand(command.join(' ')).then((data) => {
