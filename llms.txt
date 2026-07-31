@@ -1,0 +1,29 @@
+# vscode-golang-gherkingen
+
+> VS Code extension that generates Behaviour Driven Development (BDD) Go test
+> boilerplate from Cucumber/Gherkin `*.feature` files by running the
+> [gherkingen](https://github.com/hedhyw/gherkingen) generator in a Docker
+> container.
+
+The extension contributes one command, `golang-gherkingen.generate`
+("Go: Generate BDD Golang test"). It pulls the `hedhyw/gherkingen` Docker
+image, mounts the active feature file read-only into a network-less
+container, and opens the generated Go test in a new editor. Rootless Docker
+is required at runtime. The optional `golang-gherkingen.feature.language`
+setting selects the natural language of the feature file.
+
+## Docs
+
+- [README.md](README.md): user-facing description, usage, requirements
+- [AGENTS.md](AGENTS.md): architecture, layout, build/lint/test/package commands
+- [CHANGELOG.md](CHANGELOG.md): release notes
+
+## Source
+
+- [src/extension.ts](src/extension.ts): the entire extension implementation
+- [package.json](package.json): extension manifest and npm scripts
+- [src/test/runTest.ts](src/test/runTest.ts): VS Code integration test entry point
+
+## Optional
+
+- [vsc-extension-quickstart.md](vsc-extension-quickstart.md): VS Code extension development quickstart
