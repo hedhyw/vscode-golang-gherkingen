@@ -23,11 +23,21 @@ It is an extension for VS-Code that helps to generate Behaviour Driven Developme
 
 ## Extension Settings
 
-No settings.
+- `golang-gherkingen.feature.language` — the natural language used to describe the feature (optional; it can also be derived from the file name, e.g. `<description>.<language_hint>.feature`).
 
 ## Known Issues
 
 No known issues.
+
+## Development
+
+- `npm ci` — install dependencies.
+- `npm run compile` — compile TypeScript to `out/` (or `npm run watch`).
+- `npm run lint` — run ESLint.
+- `npm test` — run integration tests (downloads VS Code; on headless Linux use `xvfb-run -a npm test`).
+- `npx @vscode/vsce package` — build the `.vsix` package.
+
+Press `F5` in VS Code to launch an Extension Development Host.
 
 ## Release Notes
 
