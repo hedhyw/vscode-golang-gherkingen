@@ -271,7 +271,7 @@
     "glob": "^13.0.6",
     "mocha": "^11.7.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.65.0"
+    "typescript-eslint": "^8.68.0"
   },
   "overrides": {
     "diff": "^9.0.0",
